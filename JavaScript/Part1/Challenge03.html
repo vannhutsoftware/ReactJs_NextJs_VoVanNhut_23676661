@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 03</title>
+  </head>
+  <body>
+    <script>
+      // DATA 1
+      console.log("=== DATA 1 ===");
+      const dolphinsAvg1 = (96 + 108 + 89) / 3;
+      const koalasAvg1 = (88 + 91 + 110) / 3;
+
+      console.log(`Dolphins: ${dolphinsAvg1}`);
+      console.log(`Koalas: ${koalasAvg1}`);
+
+      if (dolphinsAvg1 > koalasAvg1) {
+        console.log("Dolphins win the trophy\n");
+      } else if (koalasAvg1 > dolphinsAvg1) {
+        console.log("Koalas win the trophy\n");
+      } else {
+        console.log("It's a draw\n");
+      }
+
+      // DATA BONUS 1
+      console.log("=== DATA BONUS 1 ===");
+      const dolphinsAvg2 = (97 + 112 + 101) / 3;
+      const koalasAvg2 = (109 + 95 + 123) / 3;
+
+      console.log(`Dolphins: ${dolphinsAvg2}`);
+      console.log(`Koalas: ${koalasAvg2}`);
+
+      if (dolphinsAvg2 > koalasAvg2 && dolphinsAvg2 >= 100) {
+        console.log("Dolphins win the trophy\n");
+      } else if (koalasAvg2 > dolphinsAvg2 && koalasAvg2 >= 100) {
+        console.log("Koalas win the trophy\n");
+      } else if (
+        dolphinsAvg2 === koalasAvg2 &&
+        dolphinsAvg2 >= 100 &&
+        koalasAvg2 >= 100
+      ) {
+        console.log("It's a draw\n");
+      } else {
+        console.log("No team wins the trophy\n");
+      }
+
+      // DATA BONUS 2
+      console.log("=== DATA BONUS 2 ===");
+      const dolphinsAvg3 = (97 + 112 + 101) / 3;
+      const koalasAvg3 = (109 + 95 + 106) / 3;
+
+      console.log(`Dolphins: ${dolphinsAvg3}`);
+      console.log(`Koalas: ${koalasAvg3}`);
+
+      if (dolphinsAvg3 > koalasAvg3 && dolphinsAvg3 >= 100) {
+        console.log("Dolphins win the trophy");
+      } else if (koalasAvg3 > dolphinsAvg3 && koalasAvg3 >= 100) {
+        console.log("Koalas win the trophy");
+      } else if (
+        dolphinsAvg3 === koalasAvg3 &&
+        dolphinsAvg3 >= 100 &&
+        koalasAvg3 >= 100
+      ) {
+        console.log("It's a draw");
+      } else {
+        console.log("No team wins the trophy");
+      }
+    </script>
+  </body>
+</html>
