@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function whereAmI(lat, lng) {
+            let api = `https://geocode.xyz/${lat},${lng}?geoit=json`
+
+            fetch(api)
+                .then((response) => response.json())
+                .then((location) => {
+                    console.log(location);
+                    console.log(`You are in ${location.city}, ${location.country}`);
+                })
+        }
+
+        whereAmI(52.508, 13.381)
+        whereAmI(19.037, 72.873)
+        whereAmI(-33.933, 18.474)
+
+    </script>
+
+</body>
+
+</html>
