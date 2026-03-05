@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="images">
+        <img alt="" id="currentImg">
+    </div>
+
+    <script>
+        const imgContainer = document.querySelector('.images')
+        function createImg(imgPath) {
+            return new Promise((resolve, reject) => {
+                const img = document.createElement('img')
+                img.src = imgPath
+
+                img.addEventListener('load', () => {
+                    imgContainer.appendChild(img)
+                    resolve(img)
+                })
+
+                img.addEventListener('error', () => {
+                    reject('Image not found')
+                })
+            })
+        }
+
+        const wait = (seconds) => {
+            return new Promise((resolve) => {
+                setTimeout(resolve, seconds * 1000)
+            })
+
+        }
+
+        let currentImg;
+
+        createImg('img/Image 72.png')
+            .then((img) => {
+                currentImg = img
+                return wait(2)
+            })
+            .then(() => {
+                currentImg.style.display = 'none'
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
